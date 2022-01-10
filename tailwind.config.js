@@ -69,6 +69,9 @@ module.exports = {
         body: 'Open Sans',
         display: 'Roboto',
       },
+      boxShadow: {
+        border: 'inset 0 0 0 3px',
+      },
       spacing: {
         13: '3.25rem',
         15: '3.75rem',
