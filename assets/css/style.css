@@ -24,6 +24,10 @@
   -o-transition: none !important;
 }
 
+.is-mobile {
+  overflow: hidden;
+}
+
 .skip-link {
   position: absolute;
   left: -10000px;
