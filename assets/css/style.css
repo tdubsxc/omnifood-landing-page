@@ -42,3 +42,25 @@
   width: auto;
   height: auto;
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: none;
+}
+
+.nav-links a[class='link']:hover {
+  color: theme('colors.primary.DEFAULT');
+}
+
+@media (min-width: 1024px) {
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+}
