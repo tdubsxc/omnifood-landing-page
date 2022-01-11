@@ -3,6 +3,8 @@
 class App {
   constructor() {
     this.body = document.querySelector('body');
+    this.menu = document.querySelector('#hamburger-menu');
+    this.links = document.querySelectorAll('a');
   }
 
   init() {
@@ -10,9 +12,25 @@ class App {
   }
 
   events() {
-    window.addEventListener('DOMContentLoaded', (e) => {
-      this.body.classList.remove('preload');
+    window.addEventListener('DOMContentLoaded', () => this.stopAnimationsOnPageLoad());
+
+    this.menu.addEventListener('click', () => this.menuToggler());
+
+    this.links.forEach((link) => {
+      link.addEventListener('click', (e) => this.handleLinkClick(e));
     });
+  }
+
+  stopAnimationsOnPageLoad() {
+    this.body.classList.remove('preload');
+  }
+
+  menuToggler() {
+    this.menu.classList.toggle('opened');
+  }
+
+  handleLinkClick(e) {
+    e.preventDefault();
   }
 }
 
