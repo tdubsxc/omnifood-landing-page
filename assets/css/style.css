@@ -14,6 +14,10 @@
   .ps {
     @apply py-12 md:py-16 xl:py-20;
   }
+
+  .featured-in-logo {
+    @apply h-3 brightness-0 opacity-50 sm:h-4 md:h-6 lg:h-7 xl:h-8;
+  }
 }
 
 .preload * {
@@ -102,6 +106,34 @@
 
 .hamburger-menu.opened .line-c {
   transform: rotate(-135deg);
+}
+
+.stroke {
+  position: relative;
+  top: 1px;
+  width: 100%;
+  max-width: 80px;
+  height: 3px;
+  background-color: #777;
+}
+
+.stroke-left::before,
+.stroke-right::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 8px solid transparent;
+}
+
+.stroke-left::before {
+  border-left-color: #777;
+  left: 0;
+}
+
+.stroke-right::before {
+  border-right-color: #777;
+  right: 0;
 }
 
 @media (min-width: 1024px) {
