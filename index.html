@@ -9,12 +9,12 @@
       name="description"
       content="Each meal is perfectly sized for one person to enjoy in a sitting and our healthy fully prepared meals are always delivered fresh and on time."
     />
-    <title>Omnifood Landing Page</title>
+    <title>Omnifood</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -32,11 +32,14 @@
             <li><a href="#plans" class="link">Plans</a></li>
             <li><a href="#cta" class="btn text-white bg-primary hover:bg-primary-dark">Free Trial</a></li>
           </ul>
-          <div id="hamburger-menu" class="hamburger-menu">
+          <button
+            id="hamburger-menu"
+            class="hamburger-menu focus:outline-none focus:ring focus:ring-offset-transparent focus:ring-offset-1"
+          >
             <div class="line line-a"></div>
             <div class="line line-b"></div>
             <div class="line line-c"></div>
-          </div>
+          </button>
         </nav>
       </div>
     </header>
@@ -44,9 +47,9 @@
       <section id="hero" class="ps bg-secondary">
         <div class="container">
           <div class="grid grid-cols-2 gap-6 md:items-center lg:gap-12">
-            <div class="col-span-2 space-y-6 text-center md:col-span-1 md:text-left xl:space-y-8">
+            <div class="col-span-2 space-y-4 text-center md:col-span-1 md:text-left xl:space-y-8">
               <h1
-                class="font-display font-bold text-body-dark text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+                class="font-display font-black text-body-dark text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
               >
                 A healthy meal delivered right to your door, every single day!
               </h1>
@@ -115,7 +118,7 @@
           </div>
         </div>
       </section>
-      <section id="featured-in" class="py-4 md:py-8 xl:py-12">
+      <section id="featured-in" class="pt-12">
         <div class="container">
           <div class="flex justify-center items-center mb-3 xl:mb-6">
             <div class="stroke stroke-left"></div>
@@ -130,6 +133,87 @@
             <img class="featured-in-logo" src="assets/images/logos/the-new-york-times.png" alt="The NY Times" />
             <img class="featured-in-logo" src="assets/images/logos/forbes.png" alt="Forbes" />
             <img class="featured-in-logo" src="assets/images/logos/usa-today.png" alt="USA Today" />
+          </div>
+        </div>
+      </section>
+      <section id="how-it-works" class="ps">
+        <div class="container">
+          <div class="space-y-3 mb-18">
+            <h2 class="font-display font-black text-primary text-2xl">How It Works</h2>
+            <h3 class="font-display font-bold text-body-dark text-6xl">Your Daily Dose of Health in 3 Simple Steps</h3>
+          </div>
+          <div class="space-y-16">
+            <div class="grid grid-cols-2 gap-6 md:items-center lg:gap-12">
+              <div class="col-span-2 md:col-span-1">
+                <div class="space-y-3">
+                  <span class="font-display font-medium text-neutral-300 text-10xl">01</span>
+                  <h4 class="font-display font-bold text-body-dark text-4xl capitalize">Tell us what you like</h4>
+                  <p class="xl:text-md">
+                    Never again waste time thinking about what to eat! Omnifood AI will create a 100% personalized
+                    weekly meal plan just for you. It makes sure you get all the nutrients and vitamins you need, no
+                    matter what diet you follow!
+                  </p>
+                </div>
+              </div>
+              <div class="col-span-2 md:col-span-1">
+                <div class="app-screen">
+                  <img
+                    src="/assets/images/app/app-screen-1.png"
+                    alt="iPhone app screen"
+                    title="Tell us what you like"
+                    class="w-2/5"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-6 md:items-center lg:gap-12">
+              <div class="col-span-2 order-1 md:col-span-1">
+                <div class="space-y-3">
+                  <span class="font-display font-medium text-neutral-300 text-10xl">02</span>
+                  <h4 class="font-display font-bold text-body-dark text-4xl capitalize">
+                    Approve your weekly meal plan
+                  </h4>
+                  <p class="xl:text-md">
+                    Once per week you will have a chance to approve the meal plan generated for you by Omnifood AI. You
+                    can change the ingredients, swap entire meals, or even add your own recipes!
+                  </p>
+                </div>
+              </div>
+              <div class="col-span-2 md:col-span-1">
+                <div class="app-screen">
+                  <img
+                    src="/assets/images/app/app-screen-2.png"
+                    alt="iPhone app screen"
+                    title="Approve your weekly meal plan"
+                    class="w-2/5"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-6 md:items-center lg:gap-12">
+              <div class="col-span-2 md:col-span-1">
+                <div class="space-y-3">
+                  <span class="font-display font-medium text-neutral-300 text-10xl">03</span>
+                  <h4 class="font-display font-bold text-body-dark text-4xl capitalize">
+                    Delivered at a convenient time
+                  </h4>
+                  <p class="xl:text-md">
+                    The best chefs in town will cook your selected meal everyday, and we will deliver it to your door
+                    whenever works best for you. You can change the delivery schedule and address daily!
+                  </p>
+                </div>
+              </div>
+              <div class="col-span-2 md:col-span-1">
+                <div class="app-screen">
+                  <img
+                    src="/assets/images/app/app-screen-3.png"
+                    alt="iPhone app screen"
+                    title="Delivered at a convenient time"
+                    class="w-2/5"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

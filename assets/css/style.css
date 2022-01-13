@@ -4,7 +4,7 @@
 
 @layer components {
   .btn {
-    @apply inline-flex justify-center items-center no-underline border-0 py-2 px-7 align-middle select-none rounded shadow-sm font-body font-medium text-center hover:shadow-md focus:outline-none focus:ring transition;
+    @apply inline-flex justify-center items-center no-underline border-0 py-2 px-7 align-middle select-none rounded shadow-sm font-body font-medium text-center hover:shadow-md focus:outline-none focus:ring focus:ring-offset-transparent focus:ring-offset-1 transition;
   }
 
   .link {
@@ -61,8 +61,9 @@
   justify-content: center;
   align-items: center;
   width: 28px;
-  height: 24px;
+  height: 28px;
   transform: rotate(0deg);
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -134,6 +135,35 @@
 .stroke-right::before {
   border-right-color: #777;
   right: 0;
+}
+
+.app-screen {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.app-screen::before,
+.app-screen::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 1000px;
+}
+
+.app-screen::before {
+  z-index: -10;
+  width: 60%;
+  padding-bottom: 60%;
+  background-color: #fdf2e9;
+}
+.app-screen::after {
+  z-index: -5;
+  width: 50%;
+  padding-bottom: 50%;
+  background-color: #fae5d3;
 }
 
 @media (min-width: 1024px) {
