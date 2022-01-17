@@ -9,6 +9,11 @@ class App {
 
   init() {
     this.events();
+    AOS.init({
+      offset: 250,
+      duration: 500,
+      easing: 'ease',
+    });
   }
 
   events() {
