@@ -12,7 +12,7 @@
   }
 
   .ps {
-    @apply py-12 md:py-16 xl:py-20;
+    @apply py-12 md:py-14 xl:py-16;
   }
 
   .featured-in-logo {
@@ -25,6 +25,10 @@
 
   .price-card {
     @apply col-span-12 border-2 border-secondary rounded-lg space-y-8 p-8 shadow-md md:col-span-6 lg:col-span-4;
+  }
+
+  .price-card--premium {
+    @apply bg-secondary border-transparent md:mx-auto md:col-span-12 md:w-1/2 md:-order-1 lg:order-none lg:w-auto lg:mx-0 lg:col-span-4;
   }
 }
 
