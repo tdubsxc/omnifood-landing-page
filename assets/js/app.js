@@ -22,7 +22,7 @@ class App {
     this.menu.addEventListener('click', () => this.menuToggler());
 
     this.links.forEach((link) => {
-      link.addEventListener('click', (e) => this.handleLinkClick(e));
+      link.addEventListener('click', (e) => this.handleLinkClick(e, link));
     });
   }
 
@@ -34,8 +34,24 @@ class App {
     this.menu.classList.toggle('opened');
   }
 
-  handleLinkClick(e) {
+  handleLinkClick(e, link) {
     e.preventDefault();
+
+    const href = link.getAttribute('href');
+
+    if (href === '#') {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }
+
+    if (href !== '#' && href.startsWith('#')) {
+      window.scrollTo({
+        top: document.querySelector(href).offsetTop,
+        behavior: 'smooth',
+      });
+    }
   }
 }
 
