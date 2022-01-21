@@ -127,11 +127,31 @@
             <div class="stroke stroke-right"></div>
           </div>
           <div class="flex justify-between">
-            <img class="featured-in-logo" src="assets/images/logos/techcrunch.png" alt="Tech Crunch" />
-            <img class="featured-in-logo" src="assets/images/logos/business-insider.png" alt="Business Insider" />
-            <img class="featured-in-logo" src="assets/images/logos/the-new-york-times.png" alt="The NY Times" />
-            <img class="featured-in-logo" src="assets/images/logos/forbes.png" alt="Forbes" />
-            <img class="featured-in-logo" src="assets/images/logos/usa-today.png" alt="USA Today" />
+            <img
+              class="h-3 brightness-0 opacity-50 sm:h-4 md:h-6 lg:h-7 xl:h-8"
+              src="assets/images/logos/techcrunch.png"
+              alt="Tech Crunch"
+            />
+            <img
+              class="h-3 brightness-0 opacity-50 sm:h-4 md:h-6 lg:h-7 xl:h-8"
+              src="assets/images/logos/business-insider.png"
+              alt="Business Insider"
+            />
+            <img
+              class="h-3 brightness-0 opacity-50 sm:h-4 md:h-6 lg:h-7 xl:h-8"
+              src="assets/images/logos/the-new-york-times.png"
+              alt="The NY Times"
+            />
+            <img
+              class="h-3 brightness-0 opacity-50 sm:h-4 md:h-6 lg:h-7 xl:h-8"
+              src="assets/images/logos/forbes.png"
+              alt="Forbes"
+            />
+            <img
+              class="h-3 brightness-0 opacity-50 sm:h-4 md:h-6 lg:h-7 xl:h-8"
+              src="assets/images/logos/usa-today.png"
+              alt="USA Today"
+            />
           </div>
         </div>
       </section>
@@ -450,7 +470,7 @@
           </div>
         </div>
       </section>
-      <section id="pricing" class="ps overflow-hidden">
+      <section id="pricing" class="pt-12 md:pt-14 xl:pt-16 overflow-hidden">
         <div class="container">
           <div class="space-y-1 text-center max-w-md mx-auto mb-6 md:mb-12 lg:max-w-none lg:text-left">
             <h2 class="font-display font-black text-primary text-lg md:text-xl lg:text-2xl">Plans</h2>
@@ -467,7 +487,7 @@
                 </h4>
                 <h5 class="font-medium text-body-dark text-base mt-2">That's just $11 per meal!</h5>
               </div>
-              <ul class="flex flex-col gap-2">
+              <ul class="flex flex-col gap-2 mb-6">
                 <li class="flex items-center gap-2">
                   <ion-icon class="text-2xl text-primary" name="checkmark"></ion-icon>
                   <span>1 meal per day</span>
@@ -497,7 +517,7 @@
                 </h4>
                 <h5 class="font-medium text-body-dark text-base mt-2">That's just $8 per meal!</h5>
               </div>
-              <ul class="flex flex-col gap-2">
+              <ul class="flex flex-col gap-2 mb-6">
                 <li class="flex items-center gap-2">
                   <ion-icon class="text-2xl text-primary" name="checkmark"></ion-icon>
                   <span>3 meals per day</span>
@@ -526,7 +546,7 @@
                   <span>$</span>14<span class="font-normal text-3xl">&nbsp;/meal</span>
                 </h4>
               </div>
-              <ul class="flex flex-col gap-2">
+              <ul class="flex flex-col gap-2 mb-6">
                 <li class="flex items-center gap-2">
                   <ion-icon class="text-2xl text-primary" name="checkmark"></ion-icon>
                   <span>1 meal per day</span>
@@ -573,6 +593,76 @@
               <h3 class="font-display font-bold my-3 text-lg text-body-dark">Pause Anytime</h3>
               <p>You can pause your subscription at any point in time and we will refund any unused days.</p>
             </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact-us" class="ps">
+        <div class="container">
+          <div
+            class="grid grid-cols-12 rounded-lg overflow-hidden bg-gradient-to-br from-primary-light to-primary-dark lg:w-4/5 lg:mx-auto"
+          >
+            <div class="col-span-12 p-6 text-body-dark lg:col-span-8">
+              <h2 class="font-display font-bold text-2xl text-center mb-6 md:text-4xl lg:text-left">
+                First-time customers get a free meal!
+              </h2>
+              <p class="font-medium text-center lg:text-left">
+                Healthy, tasty and hassle-free meals are waiting for you. Start eating well today. You can also cancel
+                or pause your subscription at anytime.
+              </p>
+              <form id="register" action="#" class="grid grid-cols-12 gap-y-6 mt-8 md:gap-x-8">
+                <div class="col-span-12 md:col-span-6">
+                  <label for="first-name" class="font-semibold text-sm capitalize block mb-2">First name</label>
+                  <input
+                    type="text"
+                    name="first-name"
+                    id="first-name"
+                    class="block w-full p-2 rounded outline-none bg-secondary shadow-sm focus:ring"
+                    placeholder="Jane"
+                    required
+                  />
+                </div>
+                <div class="col-span-12 md:col-span-6">
+                  <label for="last-name" class="font-semibold text-sm capitalize block mb-2">Last name</label>
+                  <input
+                    type="text"
+                    name="last-name"
+                    id="last-name"
+                    class="block w-full p-2 rounded outline-none bg-secondary shadow-sm focus:ring"
+                    placeholder="Doe"
+                    required
+                  />
+                </div>
+                <div class="col-span-12 md:col-span-6">
+                  <label for="email" class="font-semibold text-sm capitalize block mb-2">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="block w-full p-2 rounded outline-none bg-secondary shadow-sm focus:ring"
+                    placeholder="janedoe@example.com"
+                    required
+                  />
+                </div>
+                <div class="col-span-12 md:col-span-6">
+                  <label for="phone-number" class="font-semibold text-sm capitalize block mb-2">Telephone</label>
+                  <input
+                    type="tel"
+                    name="phone-number"
+                    id="phone-number"
+                    class="block w-full p-2 rounded outline-none bg-secondary shadow-sm focus:ring"
+                    placeholder="111-222-4444"
+                    required
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="btn col-span-12 bg-[#45260a] text-gray-50 hover:bg-[#3e2209] sm:w-1/2 sm:mx-auto md:col-span-6 md:w-full md:mx-0 md:mt-2"
+                >
+                  Register
+                </button>
+              </form>
+            </div>
+            <div class="hidden bg-cover bg-center bg-cta-form lg:col-span-4 lg:block"></div>
           </div>
         </div>
       </section>

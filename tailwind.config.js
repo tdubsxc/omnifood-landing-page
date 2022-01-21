@@ -81,6 +81,10 @@ module.exports = {
       boxShadow: {
         border: 'inset 0 0 0 3px',
       },
+      backgroundImage: {
+        'cta-form':
+          "linear-gradient(to bottom right, rgba(235,152,78,.4), rgba(231, 126, 35, .4)), url('/assets/images/meals/eating.jpg')",
+      },
       spacing: {
         13: '3.25rem',
         15: '3.75rem',
