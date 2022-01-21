@@ -5,6 +5,8 @@ class App {
     this.body = document.querySelector('body');
     this.menu = document.querySelector('#hamburger-menu');
     this.links = document.querySelectorAll('a');
+    this.siteHeader = document.querySelector('#site-header');
+    this.heroSection = document.querySelector('#hero');
   }
 
   init() {
@@ -12,21 +14,23 @@ class App {
     AOS.init({
       offset: 250,
       duration: 500,
-      easing: 'ease',
+      once: true,
     });
   }
 
   events() {
-    window.addEventListener('DOMContentLoaded', () => this.stopAnimationsOnPageLoad());
+    window.addEventListener('DOMContentLoaded', () => this.pauseAnimationsOnPageLoad());
 
     this.menu.addEventListener('click', () => this.menuToggler());
 
     this.links.forEach((link) => {
       link.addEventListener('click', (e) => this.handleLinkClick(e, link));
     });
+
+    this.handleStickyHeader();
   }
 
-  stopAnimationsOnPageLoad() {
+  pauseAnimationsOnPageLoad() {
     this.body.classList.remove('preload');
   }
 
@@ -47,11 +51,34 @@ class App {
     }
 
     if (href !== '#' && href.startsWith('#')) {
+      const sectionEl = document.querySelector(href).offsetTop;
+
       window.scrollTo({
-        top: document.querySelector(href).offsetTop,
+        top: sectionEl - this.siteHeader.offsetHeight,
         behavior: 'smooth',
       });
     }
+  }
+
+  handleStickyHeader() {
+    const obs = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+
+        if (!entry.isIntersecting) {
+          this.body.classList.add('sticky-header');
+        } else {
+          this.body.classList.remove('sticky-header');
+        }
+      },
+      {
+        root: null,
+        threshold: 0,
+        rootMargin: `-${this.siteHeader.offsetHeight}px`,
+      },
+    );
+
+    obs.observe(this.heroSection);
   }
 }
 

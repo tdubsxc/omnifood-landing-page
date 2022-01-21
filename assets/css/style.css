@@ -43,6 +43,26 @@
   height: auto;
 }
 
+.site-header {
+  background-color: theme('backgroundColor.secondary');
+}
+
+.sticky-header #site-header {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px,
+    rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sticky-header #hero {
+  margin-top: 80px;
+}
+
 .nav-links {
   display: none;
 }
@@ -176,7 +196,7 @@
   box-shadow: theme('boxShadow.xl');
 }
 
-.price-card {
+.plans-card {
   grid-column: span 12;
   border-top: 2px solid theme('colors.secondary');
   border-radius: 8px;
@@ -184,20 +204,20 @@
   padding: 32px;
 }
 
-.price-card--premium {
+.plans-card--premium {
   background-color: theme('backgroundColor.secondary');
   border-color: transparent;
 }
 
 @media (min-width: 768px) {
-  .price-card {
+  .plans-card {
     grid-column: span 6;
     border-top: 2px solid theme('colors.secondary');
     border-radius: 8px;
     box-shadow: theme('boxShadow.md');
   }
 
-  .price-card--premium {
+  .plans-card--premium {
     margin-left: auto;
     margin-right: auto;
     grid-column: span 12;
@@ -221,11 +241,11 @@
     display: none;
   }
 
-  .price-card {
+  .plans-card {
     grid-column: span 4;
   }
 
-  .price-card--premium {
+  .plans-card--premium {
     margin-left: 0;
     margin-right: 0;
     grid-column: span 4;
