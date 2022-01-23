@@ -7,6 +7,7 @@ class App {
     this.links = document.querySelectorAll('a');
     this.siteHeader = document.querySelector('#site-header');
     this.heroSection = document.querySelector('#hero');
+    this.navLinks = document.querySelectorAll('#navbar a');
   }
 
   init() {
@@ -27,6 +28,15 @@ class App {
       link.addEventListener('click', (e) => this.handleLinkClick(e, link));
     });
 
+    this.navLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        if (this.body.classList.contains('is-mobile') && this.menu.classList.contains('opened')) {
+          this.body.classList.remove('is-mobile');
+          this.menu.classList.remove('opened');
+        }
+      });
+    });
+
     this.handleStickyHeader();
   }
 
@@ -36,6 +46,7 @@ class App {
 
   menuToggler() {
     this.menu.classList.toggle('opened');
+    this.body.classList.toggle('is-mobile');
   }
 
   handleLinkClick(e, link) {
